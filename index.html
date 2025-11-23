@@ -90,209 +90,188 @@ Advance Higher Education Academy (FHEA).</p>
 			<head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Dr. Yetgin — Teaching Portfolio</title>
-<meta name="description" content="Teaching portfolio of Dr. Yetgin — module leadership, programme leadership, and professional recognition."/>
+<title>Teaching Portfolio — Dr. Yetgin</title>
+<meta name="description" content="Teaching portfolio of Dr. Yetgin — leadership roles, modules, and recognition."/>
 <style>
 :root{
-  --bg:#0b1220;        /* deep navy */
-  --panel:#0f1a33;     /* softer navy */
-  --ink:#e6edf6;       /* near-white text */
-  --muted:#a3b0c2;     /* muted text */
-  --accent:#66d9e8;    /* cyan accent */
-  --accent-2:#9b8cff;  /* violet accent */
-  --card:#0f1629;      /* card background */
-  --ring: rgba(102,217,232,.35);
-  --radius:16px;
-  --shadow: 0 10px 30px rgba(0,0,0,.25);
+  /* Same palette as publications page */
+  --ink:#111827; --muted:#6b7280; --brand:#0b5cab;
+  --bg:#f8fafc; --card:#ffffff; --border:#e5e7eb;
+  --radius:14px; --shadow:0 2px 6px rgba(0,0,0,.05);
 }
 
 *{box-sizing:border-box}
-html,body{height:100%}
 body{
-  margin:0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
-  "Noto Sans", "Liberation Sans", Arial, "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol", "Noto Color Emoji";
-  background: radial-gradient(1200px 600px at 10% -10%, #12203a 0%, transparent 60%),
-              radial-gradient(900px 500px at 120% -30%, #1a2453 0%, transparent 60%), var(--bg);
-  color:var(--ink);
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Inter, "Helvetica Neue",
+               Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  /* Larger, clearer typography */
+  font-size: 17px; line-height: 1.55;
   -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
 }
 
-/* Container */
-.container{max-width:1100px; margin: clamp(16px, 4vw, 48px) auto; padding: 0 18px;}
+.container{max-width:1100px; margin:2rem auto; padding:0 1rem;}
+h1,h2,h3{margin:0 0 .25rem;}
+h1{font-size: clamp(1.6rem, 2.6vw, 2.1rem); font-weight: 800;}
+h2{font-size: clamp(1.2rem, 1.8vw, 1.5rem); font-weight: 800;}
+h3{font-size: 1.15rem; font-weight: 700; line-height:1.35;}
+p{margin:.25rem 0 .75rem; color:var(--ink)}
+.muted{color:var(--muted)}
 
-/* Header / Identity */
 .header{
-  display:grid; grid-template-columns:72px 1fr; gap:16px; align-items:center;
-  margin-bottom: 18px;
+  display:flex; align-items:flex-start; gap:1rem; margin-bottom:1rem;
 }
-.avatar{
-  width:72px; height:72px; border-radius:50%; background:
-  linear-gradient(135deg, var(--accent), var(--accent-2));
-  display:grid; place-items:center; color:#00141a; font-weight:800; font-size:22px;
-  box-shadow:0 6px 20px rgba(102,217,232,.25);
+.header-badge{
+  display:inline-flex; gap:.5rem; flex-wrap:wrap; margin-top:.35rem;
 }
-.title h1{margin:.1rem 0 .2rem; font-size: clamp(1.4rem, 2.2vw, 2rem); letter-spacing:.2px;}
-.title p{margin:0; color:var(--muted)}
-.badges{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px;}
 .badge{
-  font-size:.82rem; padding:.28rem .55rem; border-radius:999px; background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.08); color:var(--ink); display:inline-flex; align-items:center; gap:.4rem;
+  font-size:.9rem; color:#0f172a; background:#eef2f7; padding:.25rem .6rem; border-radius:999px;
+  border:1px solid #d8dee9;
 }
 
-/* Cards */
-.grid{
-  display:grid; gap:14px;
-  grid-template-columns: repeat(12, 1fr);
-}
-.card{
-  background: linear-gradient(180deg, var(--card), #0b1324);
-  border:1px solid rgba(255,255,255,.06);
-  border-radius: var(--radius);
-  padding:16px;
-  box-shadow: var(--shadow);
-}
-.card h2{
-  margin:0 0 10px; font-size:1.05rem; letter-spacing:.3px;
-}
-.card .lead{ color:var(--muted); margin:.25rem 0 0; }
-
-/* Layout assignments */
-.span-4{ grid-column: span 4; }
-.span-8{ grid-column: span 8; }
-.span-12{ grid-column: span 12; }
+.grid{ display:grid; gap:1rem; grid-template-columns: repeat(12, 1fr); }
+.span-12{grid-column: span 12;}
+.span-8{grid-column: span 8;}
+.span-4{grid-column: span 4;}
+.span-6{grid-column: span 6;}
 @media (max-width: 900px){
-  .span-4, .span-8{ grid-column: span 12; }
+  .span-8,.span-4,.span-6{grid-column: span 12;}
 }
 
-/* Lists */
-.role-list, .module-list{ list-style:none; padding:0; margin:.25rem 0 0; }
-.role-list li, .module-list li{
-  display:flex; gap:.6rem; align-items:flex-start; padding:.5rem .25rem; border-radius:10px;
+.card{
+  border:1px solid var(--border); border-radius:var(--radius); background:var(--card);
+  padding:1rem 1.2rem; box-shadow:var(--shadow);
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
 }
-.role-list li:hover, .module-list li:hover{ background: rgba(102,217,232,.06); }
-.role-icon{
-  flex:0 0 24px; display:grid; place-items:center;
-  border-radius:8px; background: rgba(102,217,232,.12); color:var(--accent);
-  width:24px; height:24px; line-height:0;
+.card:hover{ transform: translateY(-2px); box-shadow:0 12px 28px rgba(0,0,0,.08); border-color:#dfe3e8; }
+
+.list{list-style:none; padding:0; margin:.35rem 0 0;}
+.list li{padding:.5rem .25rem; border-radius:10px;}
+.list li + li{margin-top:.15rem;}
+.list li:hover{background:#f1f5f9;}
+
+.kv{display:flex; gap:.5rem; flex-wrap:wrap; margin:.25rem 0 .25rem;}
+.pill{
+  font-size:.85rem; padding:.22rem .5rem; border-radius:999px;
+  background:#eaf2fb; color:#0b5cab; border:1px solid #d6e3f8;
 }
 
-/* Module cards */
-.module{
-  border:1px solid rgba(255,255,255,.06);
-  border-radius:14px; padding:12px 12px;
-  background: rgba(255,255,255,.02);
+.actions{display:flex; gap:.5rem; flex-wrap:wrap; margin-top:.35rem;}
+.btn{
+  display:inline-block; padding:.38rem .7rem; border-radius:10px; font-size:.95rem;
+  text-decoration:none; background:#f1f5f9; color:#0f172a;
+  border:1px solid #e5e7eb;
 }
-.module h3{ margin:.1rem 0 .3rem; font-size:1rem; }
-.meta{ display:flex; gap:8px; flex-wrap:wrap; margin:.25rem 0 .25rem; }
-.meta .pill{
-  font-size:.74rem; padding:.18rem .5rem; border-radius:999px;
-  background: rgba(155,140,255,.15); color:#e8e3ff; border:1px solid rgba(155,140,255,.25);
-}
-.kicker{
-  font-size:.8rem; color:var(--muted); margin:.35rem 0 0;
-}
+.btn:hover{background:#e9eef5}
+.btn.primary{background:#0b5cab; color:#fff; border-color:#0b5cab;}
+.btn.primary:hover{background:#084b8a}
 
-/* Footer note */
-.note{
-  margin-top:14px; color:var(--muted); font-size:.9rem;
-  border-left:3px solid var(--accent); padding-left:10px;
+/* Consistent with publications “card headline row” */
+.card-head{display:flex; align-items:center; gap:.6rem; margin-bottom:.4rem;}
+.tag{
+  background:var(--brand); color:#fff; font-size:.8rem; font-weight:700;
+  border-radius:999px; padding:.12rem .5rem;
 }
-
-/* Focus rings for a11y */
-a, button{outline:none}
-a:focus-visible, button:focus-visible, .module:focus-within{
-  box-shadow: 0 0 0 3px var(--ring);
-}
+.small{font-size:.95rem;}
 </style>
 </head>
 <body>
-<main class="container" itemscope itemtype="https://schema.org/Person">
+  <main class="container">
 
-  <!-- Identity -->
-  <section class="header">
-    <div class="avatar" aria-hidden="true">HY</div>
-    <div class="title">
-      <h1 itemprop="name">Dr. Yetgin</h1>
-      <p>
-        <span itemprop="jobTitle">Module Leader & Programme Leader</span>
-      </p>
-      <div class="badges" aria-label="Professional recognition and experience">
-        <span class="badge" title="Advance HE Fellow">
-          <!-- award icon -->
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.39 4.84L20 7.27l-3.64 3.55.86 5.01L12 13.77l-4.22 2.23.86-5.01L5 7.27l5.61-.43L12 2z"/></svg>
-          Advance HE Fellow (FHEA)
-        </span>
-        <span class="badge" title="Years of teaching">9+ years teaching</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Top summary cards -->
-  <section class="grid" aria-label="At-a-glance">
-    <div class="card span-4">
-      <h2>Roles</h2>
-      <ul class="role-list">
-        <li>
-          <span class="role-icon" aria-hidden="true">
-            <!-- hat icon -->
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zm0 13L4.62 12 12 8l7.38 4L12 16z"/></svg>
-          </span>
-          <span>Module Leader: <strong>CST2133</strong> — Data Science and Machine Learning</span>
-        </li>
-        <li>
-          <span class="role-icon" aria-hidden="true">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zm0 13L4.62 12 12 8l7.38 4L12 16z"/></svg>
-          </span>
-          <span>Module Leader: <strong>CST3133</strong> — Advanced Topics in DS &amp; AI</span>
-        </li>
-        <li>
-          <span class="role-icon" aria-hidden="true">
-            <!-- people icon -->
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V20h14v-3.5C15 14.17 10.33 13 8 13zm8 0c-.29 0-.62.02-.97.05C16.66 14.17 19 15.3 19 16.5V20h5v-3.5c0-2.33-4.67-3.5-8-3.5z"/></svg>
-          </span>
-          <span>Programme Leader: <strong>BSc Computer Science (Systems Engineering)</strong></span>
-        </li>
-      </ul>
-    </div>
-
-    <div class="card span-8">
-      <h2>Teaching scope</h2>
-      <p class="lead">Teaching across <strong>BSc</strong>, <strong>MSc</strong>, and <strong>PhD</strong> levels with an emphasis on data science, machine learning, and advanced topics in AI.</p>
-      <p class="lead" style="margin-top:.4rem;">Commitment to inclusive pedagogy, authentic assessment, and research-led curriculum design.</p>
-      <p class="note">This portfolio presents current leadership responsibilities and headline modules. More detail (syllabi, assessments, office hours) can be added as needed.</p>
-    </div>
-  </section>
-
-  <!-- Modules detail -->
-  <section class="grid" aria-label="Modules" style="margin-top:14px;">
-    <div class="card span-12">
-      <h2>Current modules</h2>
-
-      <div class="grid" style="margin-top:8px;">
-        <!-- CST2133 -->
-        <div class="span-6 module" itemscope itemtype="https://schema.org/Course">
-          <h3 itemprop="name">CST2133 — Data Science and Machine Learning</h3>
-          <div class="meta">
-            <span class="pill">Level: BSc</span>
-            <span class="pill">Module Leader</span>
-          </div>
-          <p class="kicker" itemprop="description">Core DS/ML workflows: data preparation, model building, evaluation, and responsible practice.</p>
-        </div>
-
-        <!-- CST3133 -->
-        <div class="span-6 module" itemscope itemtype="https://schema.org/Course">
-          <h3 itemprop="name">CST3133 — Advanced Topics in Data Science and AI</h3>
-          <div class="meta">
-            <span class="pill">Level: BSc (Advanced)</span>
-            <span class="pill">Module Leader</span>
-          </div>
-          <p class="kicker" itemprop="description">Selected advanced DS/AI topics with research-led seminars and applied mini-projects.</p>
+    <!-- Page header -->
+    <section class="header">
+      <div>
+        <h1>Teaching portfolio</h1>
+        <p class="muted small">Dr. Yetgin — Advance HE Fellow (FHEA) • 9+ years’ teaching across BSc, MSc, and PhD</p>
+        <div class="header-badge">
+          <span class="badge">Advance HE Fellow (FHEA)</span>
+          <span class="badge">9+ years teaching</span>
+          <span class="badge">Research-led, inclusive pedagogy</span>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-</main>
+    <!-- Roles / Recognition -->
+    <section class="grid" aria-label="Overview">
+      <article class="card span-8">
+        <div class="card-head">
+          <span class="tag">Leadership</span>
+          <h2>Current roles</h2>
+        </div>
+        <ul class="list">
+          <li><strong>Module Leader:</strong> CST2133 — Data Science and Machine Learning</li>
+          <li><strong>Module Leader:</strong> CST3133 — Advanced Topics in Data Science &amp; AI</li>
+          <li><strong>Programme Leader:</strong> BSc Computer Science (Systems Engineering)</li>
+        </ul>
+      </article>
+
+      <article class="card span-4">
+        <div class="card-head">
+          <span class="tag">Recognition</span>
+          <h2>Professional</h2>
+        </div>
+        <p class="muted" style="margin-top:.2rem">Pedagogic focus on authenticity, responsible AI, and student experience.</p>
+        <ul class="list">
+          <li><strong>Advance HE Fellow (FHEA)</strong></li>
+          <li>Curriculum design &amp; assessment leadership</li>
+          <li>Supervisor: projects across DS/AI</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Modules -->
+    <section class="grid" aria-label="Modules" style="margin-top:1rem;">
+      <article class="card span-6">
+        <div class="card-head">
+          <span class="tag">Module</span>
+          <h2>CST2133 — Data Science and Machine Learning</h2>
+        </div>
+        <div class="kv">
+          <span class="pill">Level: BSc</span>
+          <span class="pill">Module Leader</span>
+        </div>
+        <p class="muted">Foundations of DS/ML: data preparation, model building, evaluation, and responsible practice.</p>
+        <!-- Optional action buttons (add real links if available) -->
+        <!-- <div class="actions">
+          <a class="btn primary" href="#" aria-disabled="true">Module guide</a>
+          <a class="btn" href="#" aria-disabled="true">Assessment brief</a>
+        </div> -->
+      </article>
+
+      <article class="card span-6">
+        <div class="card-head">
+          <span class="tag">Module</span>
+          <h2>CST3133 — Advanced Topics in Data Science &amp; AI</h2>
+        </div>
+        <div class="kv">
+          <span class="pill">Level: BSc (Advanced)</span>
+          <span class="pill">Module Leader</span>
+        </div>
+        <p class="muted">Selected advanced DS/AI topics with research-led seminars and applied mini-projects.</p>
+        <!-- <div class="actions">
+          <a class="btn primary" href="#" aria-disabled="true">Module guide</a>
+          <a class="btn" href="#" aria-disabled="true">Assessment brief</a>
+        </div> -->
+      </article>
+    </section>
+
+    <!-- Programme -->
+    <section class="grid" aria-label="Programme leadership" style="margin-top:1rem;">
+      <article class="card span-12">
+        <div class="card-head">
+          <span class="tag">Programme</span>
+          <h2>BSc Computer Science (Systems Engineering) — Programme Leadership</h2>
+        </div>
+        <p class="muted">Oversight of curriculum coherence, assessment strategy, and student support across the programme.</p>
+        <ul class="list">
+          <li>Curriculum mapping and quality enhancement</li>
+          <li>Industry and research alignment</li>
+          <li>Student experience and academic advising</li>
+        </ul>
+      </article>
+    </section>
+
+  </main>
 </body>
 			
 			</div> 
