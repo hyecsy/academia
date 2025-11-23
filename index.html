@@ -4,9 +4,11 @@
   <title>Halil Yetgin</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <!-- Bootstrap 3 -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet" type="text/css">
+
   <style>
     /* Utilities */
     .mt-10{margin-top:10px}.mt-20{margin-top:20px}.mt-30{margin-top:30px}
@@ -14,10 +16,24 @@
     .section-title{margin:10px 0 15px}
     .text-justify{text-align:justify}
     .muted{color:#6b7280}
-    img.img-responsive{width:100%;height:auto}
 
     /* Right column contact box */
-    .contact-box{border:1px solid #e5e7eb;border-radius:8px;padding:15px;background:#fff}
+    .contact-box{
+      border:1px solid #e5e7eb;border-radius:8px;padding:15px;background:#fff
+    }
+
+    /* Limit the hero GIF size and center it */
+    .img-responsive.hero-img{
+      width:auto;            /* let natural width apply up to max */
+      max-width:520px;       /* cap on desktop */
+      height:auto;
+      display:block;
+      margin:0 auto 15px;    /* centered + spacing */
+    }
+    /* On small screens, allow full width */
+    @media (max-width: 480px){
+      .img-responsive.hero-img{ max-width:100%; }
+    }
 
     /* Teaching section (scoped) */
     #teaching .card{
@@ -84,9 +100,14 @@
   <div class="row">
     <!-- Left: photo + bio -->
     <div class="col-md-8">
-      <img class="img-responsive" src="photo.gif" alt="Portrait of Halil Yetgin">
+      <img class="img-responsive hero-img" src="photo.gif" alt="Portrait of Halil Yetgin">
       <div class="mt-20 text-justify">
-        <p>An academic with over 10 years of international experience in interdisciplinary computer engineering, artificial intelligence (AI), and wireless networks. Currently Lecturer and Programme Leader within the Computer Science Department at Middlesex University London. Strong teaching portfolio, innovative design and delivery of modules and assessments/feedback, a strong interest in Gen-AI in HE STEM, and a solid publication record in high-impact journals; experienced in EU-funded projects, and passionate about inclusive, student-centred teaching. He is a Fellow of the Advance HE (FHEA).</p>
+        <p>
+          An academic with over 10 years of international experience in interdisciplinary computer engineering, artificial intelligence (AI), and wireless networks.
+          Currently Lecturer and Programme Leader within the Computer Science Department at Middlesex University London. Strong teaching portfolio, innovative design and
+          delivery of modules and assessments/feedback, a strong interest in Gen-AI in HE STEM, and a solid publication record in high-impact journals; experienced in EU-funded projects,
+          and passionate about inclusive, student-centred teaching. He is a Fellow of Advance HE (FHEA).
+        </p>
       </div>
     </div>
 
@@ -195,20 +216,6 @@
           </div>
         </article>
 
-        <!-- 2022 Journal -->
-        <article class="pub-card" data-kind="Journal">
-          <header class="pub-head">
-            <span class="pub-year">2022</span>
-            <h3 class="pub-title"><a href="https://repository.mdx.ac.uk/item/11q2xq" target="_blank" rel="noopener">Multi-source multi-destination hybrid infrastructure-aided traffic aware routing in V2V/I networks</a></h3>
-            <span class="pub-badge">Journal</span>
-          </header>
-          <p class="muted">Ivanescu, T.; Yetgin, H.; Merrett, G.V.; El-Hajjar, M. — <em>IEEE Access</em> 10, 119956–119969</p>
-          <div class="pub-actions">
-            <a class="btn btn-default btn-xs" href="https://doi.org/10.1109/access.2022.3221446" target="_blank" rel="noopener">DOI</a>
-            <a class="btn btn-default btn-xs" href="https://repository.mdx.ac.uk/item/11q2xq" target="_blank" rel="noopener">View record</a>
-          </div>
-        </article>
-
         <!-- 2023 Magazine -->
         <article class="pub-card" data-kind="Magazine">
           <header class="pub-head">
@@ -220,6 +227,20 @@
           <div class="pub-actions">
             <a class="btn btn-default btn-xs" href="https://doi.org/10.1109/MIE.2022.3165673" target="_blank" rel="noopener">DOI</a>
             <a class="btn btn-default btn-xs" href="https://repository.mdx.ac.uk/item/11q2xw" target="_blank" rel="noopener">View record</a>
+          </div>
+        </article>
+
+        <!-- 2022 Journal -->
+        <article class="pub-card" data-kind="Journal">
+          <header class="pub-head">
+            <span class="pub-year">2022</span>
+            <h3 class="pub-title"><a href="https://repository.mdx.ac.uk/item/11q2xq" target="_blank" rel="noopener">Multi-source multi-destination hybrid infrastructure-aided traffic aware routing in V2V/I networks</a></h3>
+            <span class="pub-badge">Journal</span>
+          </header>
+          <p class="muted">Ivanescu, T.; Yetgin, H.; Merrett, G.V.; El-Hajjar, M. — <em>IEEE Access</em> 10, 119956–119969</p>
+          <div class="pub-actions">
+            <a class="btn btn-default btn-xs" href="https://doi.org/10.1109/access.2022.3221446" target="_blank" rel="noopener">DOI</a>
+            <a class="btn btn-default btn-xs" href="https://repository.mdx.ac.uk/item/11q2xq" target="_blank" rel="noopener">View record</a>
           </div>
         </article>
 
@@ -441,7 +462,7 @@
   <div class="row">
     <div class="col-md-12">
       <p class="text-right" style="color:#b5bec9;font-size:0.8em;margin:20px 0;">
-        <a style="color:#b5bec9;" href="https://github.com/mavroudisv/plain-academic" target="_blank">Plain Academic</a>
+        <a style="color:#b5bec9;" href="https://github.com/mavroudisv/plain-academic" target="_blank" rel="noopener">Plain Academic</a>
       </p>
     </div>
   </div>
